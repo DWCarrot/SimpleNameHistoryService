@@ -1,0 +1,22 @@
+[package]
+name = "simple_name_history_service"
+version = "0.2.0"
+edition = "2021"
+
+# See more keys and their definitions at https://doc.rust-lang.org/cargo/reference/manifest.html
+
+[dependencies]
+tracing = "^0.1"
+tracing-subscriber = "^0.3"
+futures-util = "^0.3"
+tokio = { version = "^1.21", features = ["rt", "rt-multi-thread", "signal"] }
+hyper = { version = "^0.14", features = ["client", "http1", "server", "runtime"] }
+hyper-tls = "^0.5"
+hyper-proxy = "^0.9"
+headers = "^0.3"
+warp = "^0.3"
+serde = { version = "^1.0", features = ["derive"] }
+serde_json = "^1.0"
+uuid = { version = "^1.1", features = ["serde"] }
+base64 = "^0.13"
+sqlx = { version = "^0.6", features = ["runtime-tokio-native-tls", "sqlite"] }
